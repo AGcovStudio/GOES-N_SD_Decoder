@@ -1,4 +1,9 @@
-# GOES-N SD Decoder
+# GOES-N SD Decoder  ·  🚧 WIP
+
+> **Work in progress.** The decoder works on the recordings it was tested with, but the scan direction logic, the
+> infrared channel assignment and the picture splitting are still being refined, and the output format may change.
+> 开发中：现有录音可以解码，但扫描方向判定、红外通道对应和自动分图仍在改进，输出格式可能变化。
+
 
 Baseband playback decoder for the **Sensor Data (SD)** downlink of the GOES-N/O/P satellites (GOES-13/14/15) at
 **1676.0 MHz**: the raw output of the imager and the sounder, before ground processing. It reads a baseband IQ
@@ -126,6 +131,8 @@ service. Do not use it where a wrong picture could cause harm. Read `installer/E
 ---
 
 ## 简介（中文）
+
+🚧 **开发中（WIP）**，欢迎提交录音和问题。
 
 GOES-N/O/P（GOES-13/14/15）**1676.0 MHz 传感器数据（Sensor Data，SD）** 的基带回放解码器。SD 是成像仪和探测器
 （Sounder）在地面处理之前的原始数据。输入基带录音（`.cs8` `.cu8` `.cs16` `.cf32` `.wav`，建议 6 MS/s），输出成像仪
