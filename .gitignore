@@ -1,0 +1,16 @@
+build/
+dist/
+installer/output/
+*.cs8
+*.cu8
+*.cs16
+*.cf32
+*.wav
+*.iq
+build_log.txt
+CMakeCache.txt
+CMakeFiles/
+.vs/
+.idea/
+*.user
+__pycache__/

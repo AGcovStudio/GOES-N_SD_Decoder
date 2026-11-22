@@ -1,0 +1,26 @@
+GOES-N SD Decoder - Third-party notices / 第三方组件声明
+=========================================================
+Version 1.0.0. This program is (c) 2026 AGcov（BI2QYN） and released under the GNU GPL v3 or later (LICENSES\GPL-3.0.txt).
+It uses the components below. Their copyright belongs to their owners. Full licence texts are in the LICENSES folder.
+本程序版权归 AGcov（BI2QYN）所有，以 GPL-3.0-or-later 发布。下列组件的版权归各自权利人，许可证全文见 LICENSES 文件夹。
+
+Component            Version   Licence                         How it is used / 使用方式
+-------------------  --------  ------------------------------  -----------------------------------------
+Qt (Core, Gui,       6.x       GNU LGPL v3                     Shipped as unmodified DLLs from the Qt
+ Widgets) + plugins            (LICENSES\Qt_LGPL-3.0.txt,      online installer (MinGW 64-bit). The
+                               GPL-3.0.txt)                    program is dynamically linked. You may
+                                                               replace them: see LGPL_COMPLIANCE.txt.
+MinGW-w64 runtime    -         GPL v3 + GCC Runtime Library    libstdc++-6.dll, libgcc_s_seh-1.dll,
+ (libstdc++, libgcc,           Exception 3.1 / MIT-style       libwinpthread-1.dll shipped with the
+ winpthreads)                  (LICENSES\MinGW-w64_runtime.txt) program.
+SatDump false-colour -         GPL v3                          src/gvar_fc_lut.inc: the 256 x 256 GOES
+ lookup table                                                  false-colour table (lut/goes/gvar/fc_lut.png
+ (github.com/SatDump/SatDump)                                  in SatDump), converted to a C array.
+
+The GOES SD frame format (block sync, whitening sequence, sounder frame layout) was worked out from the public
+GOES-N data book, SatDump's goesn_sd module (GPL v3) and recordings; the decoder code is an independent
+implementation. GOES SD 的帧格式参考了公开的 GOES-N 资料、SatDump 的 goesn_sd 模块（GPL v3）和实际录音，解码代码为独立实现。
+
+"Qt" is a trademark of The Qt Company Ltd. This program is not affiliated with or endorsed by The Qt Company,
+the SatDump project, NOAA or NASA.
+The program's own code does not use networking. 程序自身代码不使用网络功能。
